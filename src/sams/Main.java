@@ -8,6 +8,7 @@ import sams.db.DBConnection;
 import java.sql.SQLException;
 import sams.view.Login;
 import sams.view.Signup;
+import sams.view.Batch;
 
 /**
  *
@@ -22,6 +23,7 @@ public class Main {
         // TODO code application logic here
         new Login().setVisible(true);
         new Signup().setVisible(true);
+        new Batch().setVisible(true);
         
     }
     
