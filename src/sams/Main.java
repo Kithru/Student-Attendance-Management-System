@@ -7,6 +7,7 @@ package sams;
 import sams.db.DBConnection;
 import java.sql.SQLException;
 import sams.view.Login;
+import sams.view.Signup;
 
 /**
  *
@@ -20,6 +21,7 @@ public class Main {
     public static void main(String[] args){
         // TODO code application logic here
         new Login().setVisible(true);
+        new Signup().setVisible(true);
         
     }
     
