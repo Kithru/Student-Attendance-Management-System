@@ -4,6 +4,9 @@
  */
 package sams.view;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
 /**
  *
  * @author kithruV
@@ -65,6 +68,11 @@ public class Signup extends javax.swing.JFrame {
         btnProCreate.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnProCreate.setForeground(new java.awt.Color(51, 51, 255));
         btnProCreate.setLabel("Create");
+        btnProCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProCreateActionPerformed(evt);
+            }
+        });
 
         btnProUpdate.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnProUpdate.setForeground(new java.awt.Color(51, 51, 255));
@@ -138,6 +146,10 @@ public class Signup extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnProCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProCreateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnProCreateActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -171,6 +183,19 @@ public class Signup extends javax.swing.JFrame {
                 new Signup().setVisible(true);
             }
         });
+    }
+    
+    public String saveItem(ItemDto itemDto) throws Exception{
+        Connection connection = DBConnection.getInstance().getConnection();
+        String sql = "INSERT INTO Item VALUES (?,?,?,?,?)";
+        PreparedStatement statement = connection.prepareStatement(sql);
+        statement.setString(1, itemDto.getId());
+        statement.setString(2, itemDto.getDesc());
+        statement.setString(3, itemDto.getPack());
+        statement.setDouble(4, itemDto.getUnitPrice());
+        statement.setInt(5, itemDto.getQty());
+        
+        return statement.executeUpdate() > 0 ? "Success" : "Fail";
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
