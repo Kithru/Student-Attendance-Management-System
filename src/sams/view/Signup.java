@@ -185,18 +185,18 @@ public class Signup extends javax.swing.JFrame {
         });
     }
     
-    public String saveItem(ItemDto itemDto) throws Exception{
-        Connection connection = DBConnection.getInstance().getConnection();
-        String sql = "INSERT INTO Item VALUES (?,?,?,?,?)";
-        PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setString(1, itemDto.getId());
-        statement.setString(2, itemDto.getDesc());
-        statement.setString(3, itemDto.getPack());
-        statement.setDouble(4, itemDto.getUnitPrice());
-        statement.setInt(5, itemDto.getQty());
-        
-        return statement.executeUpdate() > 0 ? "Success" : "Fail";
-    }
+//    public String saveItem(ItemDto itemDto) throws Exception{
+//        Connection connection = DBConnection.getInstance().getConnection();
+//        String sql = "INSERT INTO Item VALUES (?,?,?,?,?)";
+//        PreparedStatement statement = connection.prepareStatement(sql);
+//        statement.setString(1, itemDto.getId());
+//        statement.setString(2, itemDto.getDesc());
+//        statement.setString(3, itemDto.getPack());
+//        statement.setDouble(4, itemDto.getUnitPrice());
+//        statement.setInt(5, itemDto.getQty());
+//        
+//        return statement.executeUpdate() > 0 ? "Success" : "Fail";
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button btnProCreate;
