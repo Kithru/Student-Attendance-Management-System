@@ -9,41 +9,64 @@ package sams.dto;
  * @author kithruV
  */
 public class SubjectDetailsDto {
-    private String description;
-    private String duration;
-    private String programCode;
-    private String programName;
 
-    public String getDescription() {
-        return description;
+    private Integer lectureHours;
+    private String subBatchNumber;
+    private String subDescription;
+    private String subProName;
+    private String subjectCode;
+    private String subjectName;
+
+    public Integer getLectureHours() {
+        return lectureHours;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLectureHours(Integer lectureHours) {
+        this.lectureHours = lectureHours;
     }
 
-    public String getDuration() {
-        return duration;
+    public String getSubBatchNumber() {
+        return subBatchNumber;
     }
 
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setSubBatchNumber(String subBatchNumber) {
+        this.subBatchNumber = subBatchNumber;
     }
 
-    public String getProgramCode() {
-        return programCode;
+    public String getSubDescription() {
+        return subDescription;
     }
 
-    public void setProgramCode(String programCode) {
-        this.programCode = programCode;
+    public void setSubDescription(String subDescription) {
+        this.subDescription = subDescription;
     }
 
-    public String getProgramName() {
-        return programName;
+    public String getSubProName() {
+        return subProName;
     }
 
-    public void setProgramName(String programName) {
-        this.programName = programName;
+    public void setSubProName(String subProName) {
+        this.subProName = subProName;
     }
+
+    public String getSubjectCode() {
+        return subjectCode;
+    }
+
+    public void setSubjectCode(String subjectCode) {
+        this.subjectCode = subjectCode;
+    }
+
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
+    }
+    
+    
+
+    
     
 }

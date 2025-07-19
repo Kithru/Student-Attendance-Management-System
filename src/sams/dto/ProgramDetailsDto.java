@@ -9,6 +9,10 @@ package sams.dto;
  * @author kithruV
  */
 public class ProgramDetailsDto {
+    private String description;
+    private String duration;
+    private String programCode;
+    private String programName;
 
     public String getDescription() {
         return description;
@@ -41,9 +45,6 @@ public class ProgramDetailsDto {
     public void setProgramName(String programName) {
         this.programName = programName;
     }
-
-    private String description;
-    private String duration;
-    private String programCode;
-    private String programName;
+    
+    
 }
