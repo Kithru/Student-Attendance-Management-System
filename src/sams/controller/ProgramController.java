@@ -4,15 +4,19 @@
  */
 package sams.controller;
 
+import sams.dto.ProgramDetailsDto;
+import sams.service.ServiceFactory;
+import sams.service.custom.ProgramService;
+import java.util.ArrayList;
 /**
  *
  * @author kithruV
  */
 public class ProgramController {
     
-    private ProgramService programService = (ItemService) ServiceFactory.getInstance().getService(ServiceFactory.ServiceTypes.ITEM);
+    private ProgramService programService = (ProgramService) ServiceFactory.getInstance().getService(ServiceFactory.ServiceTypes.PROGRAM);
     
-    public String saveItem(ItemDto itemDto) throws Exception{
-        return itemService.saveItem(itemDto);
+    public String saveItem(ProgramDetailsDto programDetailsDto) throws Exception{
+        return programService.saveItem(programDetailsDto);
     }
 }
