@@ -26,20 +26,21 @@ public class DaoFactory {
     
     public SuperDao getDao(DaoTypes type){
         switch (type) {
-            case ITEM:
-                return new ItemDaoImpl();
-            case CUSTOMER:
-                return new CustomerDaoImpl();
-            case ORDER:
-                return new OrderDaoImpl();
-            case ORDER_DETAIL:
-                return new OrderDetailImpl();
+            case PROGRAM:
+                return new ProgramDaoImpl();
+//            case CUSTOMER:
+//                return new CustomerDaoImpl();
+//            case ORDER:
+//                return new OrderDaoImpl();
+//            case ORDER_DETAIL:
+//                return new OrderDetailImpl();
             default:
                 return null;
         }
     }
     
     public enum DaoTypes{
-        ITEM, CUSTOMER, ORDER, ORDER_DETAIL
+//        ITEM, CUSTOMER, ORDER, ORDER_DETAIL
+        PROGRAM
     }
 }

@@ -7,7 +7,7 @@ package sams.service.custom.impl;
 import sams.dao.DaoFactory;
 import sams.dao.custom.ProgramDao;
 import sams.dto.ProgramDetailsDto;
-//import edu.ijse.layerd.entity.CustomerEntity;
+import sams.entity.ProgramEntity;
 import sams.service.custom.ProgramService;
 import java.util.ArrayList;
 
@@ -19,18 +19,16 @@ import java.util.ArrayList;
  */
 public class ProgramServiceImpl implements ProgramService{
     
-    private ProgramDao customerDao = (ProgramDao) DaoFactory.getInstance().getDao(DaoFactory.DaoTypes.PROGRAM);
-
+    private ProgramDao programDao = (ProgramDao) DaoFactory.getInstance().getDao(DaoFactory.DaoTypes.PROGRAM);
     @Override
-    public String saveCustomer(CustomerDto customerDto) throws Exception {
-        CustomerEntity entity = new CustomerEntity(
-                customerDto.getId(),
-                customerDto.getTitle(), 
-                customerDto.getName(),customerDto.getDob(),
-                customerDto.getSalary(),customerDto.getAddress(), customerDto.getCity(),
-                customerDto.getProvice(), customerDto.getPostalCode());
+    public String saveCustomer(ProgramDetailsDto programDetailsDto) throws Exception {
+        ProgramEntity entity = new ProgramEntity(
+                programDetailsDto.getDescription(),
+                programDetailsDto.getDuration(), 
+                programDetailsDto.getProgramCode(),
+                programDetailsDto.getProgramName());
         
-        return customerDao.save(entity)? "Success" : "Fail";
+        return programDao.save(entity)? "Success" : "Fail";
         
     }
 
