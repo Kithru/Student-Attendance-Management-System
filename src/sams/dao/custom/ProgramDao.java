@@ -4,18 +4,14 @@
  */
 package sams.dao.custom;
 
-import java.util.ArrayList;
-import sams.dao.SuperDao;
+import sams.dao.CrudDao;
+import sams.entity.ProgramEntity;
 
 /**
  *
  * @author kithruV
  */
-public interface ProgramDao <T, ID> extends SuperDao{
-    public boolean save(T t) throws Exception;
-//    public boolean update(T t) throws Exception;
-//    public boolean delete(ID id) throws Exception;
-//    public T search(ID id) throws Exception;
-//    public ArrayList<T> getAll() throws Exception;
+
+public interface ProgramDao extends CrudDao<ProgramEntity, String>{
     
 }

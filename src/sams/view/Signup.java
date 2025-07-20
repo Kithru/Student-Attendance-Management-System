@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class Signup extends javax.swing.JFrame {
 
+    private ProgramController programController = new ProgramController();
     /**
      * Creates new form Signup
      */
@@ -151,6 +152,7 @@ public class Signup extends javax.swing.JFrame {
 
     private void btnProCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProCreateActionPerformed
         // TODO add your handling code here:
+        saveProgram();
     }//GEN-LAST:event_btnProCreateActionPerformed
 
     /**
@@ -205,7 +207,7 @@ public class Signup extends javax.swing.JFrame {
     private java.awt.TextField programName;
     // End of variables declaration//GEN-END:variables
 
-    private void saveItem() {
+    private void saveProgram() {
         ProgramDetailsDto programDetailsDto = new ProgramDetailsDto(
                 programName.getText(),
                 programCode.getText(),
@@ -215,7 +217,7 @@ public class Signup extends javax.swing.JFrame {
         System.out.println(programDetailsDto);
 
         try {
-            String resp = ProgramController.saveItem(programDetailsDto);
+            String resp = programController.saveProgram(programDetailsDto);
             JOptionPane.showMessageDialog(this, resp);
 
 //            loadTable();
@@ -224,7 +226,9 @@ public class Signup extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }
-        private void clear() {
+    
+    
+    private void clear() {
         programName.setText("");
         programCode.setText("");
         duration.setText("");

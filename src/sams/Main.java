@@ -21,9 +21,9 @@ public class Main {
      */
     public static void main(String[] args){
         // TODO code application logic here
-        new Login().setVisible(true);
+//        new Login().setVisible(true);
         new Signup().setVisible(true);
-        new Batch().setVisible(true);
+//        new Batch().setVisible(true);
         
     }
     

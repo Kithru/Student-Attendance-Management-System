@@ -13,8 +13,8 @@ import sams.service.SuperService;
  *
  * @author kithruV
  */
-public interface ProgramService {
-    public String saveItem(ProgramDetailsDto programDetailsDto) throws Exception;
+public interface ProgramService extends SuperService{
+    public String saveProgram(ProgramDetailsDto programDetailsDto) throws Exception;
 //    public String updateItem(ItemDto itemDto) throws Exception;
 //    public String deleteItem(String id) throws Exception;
 //    public ItemDto searchItem(String id) throws Exception;

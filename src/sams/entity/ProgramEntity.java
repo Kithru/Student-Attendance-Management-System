@@ -9,19 +9,19 @@ package sams.entity;
  * @author kithruV
  */
 public class ProgramEntity {
-    private String description;
-    private String duration;
-    private String programCode;
     private String programName;
+    private String programCode;
+    private String duration;
+    private String description;
 
     public ProgramEntity() {
     }
 
-    public ProgramEntity(String description, String duration, String programCode, String programName) {
-        this.description = description;
-        this.duration = duration;
-        this.programCode = programCode;
+    public ProgramEntity(String programName, String programCode, String duration, String description) {
         this.programName = programName;
+        this.programCode = programCode;
+        this.duration = duration;
+        this.description = description;
     }
     
     public String getDescription() {
@@ -56,6 +56,14 @@ public class ProgramEntity {
         this.programName = programName;
     }
     
-    
+        @Override
+        public String toString() {
+            return "ProgramEntity{" +
+                   "programName='" + programName + '\'' +
+                   ", programCode='" + programCode + '\'' +
+                   ", duration='" + duration + '\'' +
+                   ", description='" + description + '\'' +
+                   '}';
+        }
     
 }
