@@ -23,21 +23,13 @@ public class ProgramEntity {
         this.duration = duration;
         this.description = description;
     }
-    
-    public String getDescription() {
-        return description;
+
+    public String getProgramName() {
+        return programName;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setProgramName(String programName) {
+        this.programName = programName;
     }
 
     public String getProgramCode() {
@@ -48,13 +40,22 @@ public class ProgramEntity {
         this.programCode = programCode;
     }
 
-    public String getProgramName() {
-        return programName;
+    public String getDuration() {
+        return duration;
     }
 
-    public void setProgramName(String programName) {
-        this.programName = programName;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
     
         @Override
         public String toString() {
