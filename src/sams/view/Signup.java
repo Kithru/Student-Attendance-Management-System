@@ -6,6 +6,9 @@ package sams.view;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import sams.dto.ProgramDetailsDto;
+import sams.controller.ProgramController;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,6 +16,7 @@ import java.sql.PreparedStatement;
  */
 public class Signup extends javax.swing.JFrame {
 
+    private ProgramController programController = new ProgramController();
     /**
      * Creates new form Signup
      */
@@ -148,6 +152,7 @@ public class Signup extends javax.swing.JFrame {
 
     private void btnProCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProCreateActionPerformed
         // TODO add your handling code here:
+        saveProgram();
     }//GEN-LAST:event_btnProCreateActionPerformed
 
     /**
@@ -184,20 +189,9 @@ public class Signup extends javax.swing.JFrame {
             }
         });
     }
-    
-//    public String saveItem(ItemDto itemDto) throws Exception{
-//        Connection connection = DBConnection.getInstance().getConnection();
-//        String sql = "INSERT INTO Item VALUES (?,?,?,?,?)";
-//        PreparedStatement statement = connection.prepareStatement(sql);
-//        statement.setString(1, itemDto.getId());
-//        statement.setString(2, itemDto.getDesc());
-//        statement.setString(3, itemDto.getPack());
-//        statement.setDouble(4, itemDto.getUnitPrice());
-//        statement.setInt(5, itemDto.getQty());
-//        
-//        return statement.executeUpdate() > 0 ? "Success" : "Fail";
-//    }
 
+
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button btnProCreate;
     private java.awt.Button btnProDelete;
@@ -212,4 +206,33 @@ public class Signup extends javax.swing.JFrame {
     private java.awt.TextField programCode;
     private java.awt.TextField programName;
     // End of variables declaration//GEN-END:variables
+
+    private void saveProgram() {
+        ProgramDetailsDto programDetailsDto = new ProgramDetailsDto(
+                programName.getText(),
+                programCode.getText(),
+                duration.getText(),
+                description.getText());
+
+        System.out.println(programDetailsDto);
+
+        try {
+            String resp = programController.saveProgram(programDetailsDto);
+            JOptionPane.showMessageDialog(this, resp);
+
+//            loadTable();
+            clear();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }
+    
+    
+    private void clear() {
+        programName.setText("");
+        programCode.setText("");
+        duration.setText("");
+        description.setText("");
+    }
+
 }
