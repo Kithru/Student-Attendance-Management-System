@@ -17,8 +17,10 @@ import java.sql.ResultSet;
 public class ProgramDaoImpl implements ProgramDao{  
     @Override
     public boolean save(ProgramEntity t) throws Exception {
-        return CrudUtil.executeUpdate("INSERT INTO Program VALUES(?,?,?,?,?)", 
-                t.getProgramName(), t.getProgramCode(), t.getDuration(), t.getDescription());
+        return CrudUtil.executeUpdate(
+            "INSERT INTO Program (programName, programCode, duration, description) VALUES (?, ?, ?, ?)",
+            t.getProgramName(), t.getProgramCode(), t.getDuration(), t.getDescription()
+        );
     }
 
 //    @Override
