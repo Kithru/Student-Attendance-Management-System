@@ -65,6 +65,6 @@ public class ProgramDetailsDto {
                ", programCode='" + programCode + '\'' +
                ", duration='" + duration + '\'' +
                ", description='" + description + '\'' +
-               '}';
+               '}' ;
     }
 }
