@@ -24,11 +24,11 @@ public class ProgramDaoImpl implements ProgramDao{
         );
     }
 
-//    @Override
-//    public boolean update(ItemEntity t) throws Exception {
-//        return CrudUtil.executeUpdate("UPDATE Item SET Description = ?, PackSize = ?, UnitPrice = ?, QtyOnHand= ? WHERE ItemCode = ?", 
-//                t.getDesc(), t.getPack(), t.getUnitPrice(), t.getQoh(), t.getCode());
-//    }
+    @Override
+    public boolean update(ProgramEntity t) throws Exception {
+        return CrudUtil.executeUpdate("UPDATE Item SET Description = ?, PackSize = ?, UnitPrice = ?, QtyOnHand= ? WHERE ItemCode = ?", 
+                t.getDesc(), t.getPack(), t.getUnitPrice(), t.getQoh(), t.getCode());
+    }
 
 //    @Override
 //    public boolean delete(String id) throws Exception {
