@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SAMS">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/SAMS.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
