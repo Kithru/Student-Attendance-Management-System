@@ -20,9 +20,9 @@ public class ProgramController {
         return programService.saveProgram(programDetailsDto);
     }
     
-//    public String updateItem(ProgramDetailsDto programDetailsDto) throws Exception{
-//        return programService.updateItem(programDetailsDto);
-//    }
+    public String updateItem(ProgramDetailsDto programDetailsDto) throws Exception{
+        return programService.updateItem(programDetailsDto);
+    }
 //    
 //    public String deleteItem(String code) throws Exception{
 //        return programService.deleteItem(code);
