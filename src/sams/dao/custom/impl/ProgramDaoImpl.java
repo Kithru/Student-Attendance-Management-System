@@ -28,7 +28,7 @@ public class ProgramDaoImpl implements ProgramDao{
     public boolean update(ProgramEntity t) throws Exception {
         return CrudUtil.executeUpdate("UPDATE Program SET programName = ?, programCode = ?, duration = ?, description= ? WHERE ProgramID = ?",
 
-                t.getDesc(), t.getPack(), t.getUnitPrice(), t.getQoh(), t.getCode());
+                t.getProgramName(), t.getProgramCode(), t.getDuration(), t.getDescription(), t.getCode());
     }
 
 //    @Override
