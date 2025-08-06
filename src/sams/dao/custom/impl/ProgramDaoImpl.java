@@ -55,14 +55,14 @@ public class ProgramDaoImpl implements ProgramDao{
     public ArrayList<ProgramEntity> getAll() throws Exception {
         ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Program");
         ArrayList<ProgramEntity> programEntities = new ArrayList<>();
-        
-        while (rst.next()) {            
+
+        while (rst.next()) {
             programEntities.add(new ProgramEntity(
-                    rst.getString(""),
-                    rst.getString("Description"),
-                    rst.getString("PackSize"),
-                    rst.getDouble("UnitPrice"),
-                    rst.getInt("QtyOnHand")));
+                    rst.getString("ProgramName"),
+                    rst.getString("ProgramCode"),
+                    rst.getString("Duration"),
+                    rst.getString("Description")
+            ));
         }
         return programEntities;
     }
