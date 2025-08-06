@@ -52,12 +52,12 @@ public class ProgramDaoImpl implements ProgramDao{
 //    }
 
     @Override
-    public ArrayList<ItemEntity> getAll() throws Exception {
+    public ArrayList<ProgramEntity> getAll() throws Exception {
         ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Item");
-        ArrayList<ItemEntity> itemEntities = new ArrayList<>();
+        ArrayList<ProgramEntity> itemEntities = new ArrayList<>();
         
         while (rst.next()) {            
-            itemEntities.add(new ItemEntity(
+            itemEntities.add(new ProgramEntity(
                     rst.getString("ItemCode"),
                     rst.getString("Description"),
                     rst.getString("PackSize"),
