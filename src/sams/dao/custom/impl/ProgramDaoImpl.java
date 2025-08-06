@@ -51,19 +51,19 @@ public class ProgramDaoImpl implements ProgramDao{
 //        return null;
 //    }
 
-//    @Override
-//    public ArrayList<ItemEntity> getAll() throws Exception {
-//        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Item");
-//        ArrayList<ItemEntity> itemEntities = new ArrayList<>();
-//        
-//        while (rst.next()) {            
-//            itemEntities.add(new ItemEntity(
-//                    rst.getString("ItemCode"),
-//                    rst.getString("Description"),
-//                    rst.getString("PackSize"),
-//                    rst.getDouble("UnitPrice"),
-//                    rst.getInt("QtyOnHand")));
-//        }
-//        return itemEntities;
-//    }
+    @Override
+    public ArrayList<ProgramEntity> getAll() throws Exception {
+        ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Item");
+        ArrayList<ProgramEntity> itemEntities = new ArrayList<>();
+        
+        while (rst.next()) {            
+            itemEntities.add(new ProgramEntity(
+                    rst.getString("ItemCode"),
+                    rst.getString("Description"),
+                    rst.getString("PackSize"),
+                    rst.getDouble("UnitPrice"),
+                    rst.getInt("QtyOnHand")));
+        }
+        return itemEntities;
+    }
 }
