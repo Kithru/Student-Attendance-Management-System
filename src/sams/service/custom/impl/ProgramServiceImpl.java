@@ -61,20 +61,20 @@ public class ProgramServiceImpl implements ProgramService{
 //        return null;
 //    }
 
-//    @Override
-//    public ArrayList<CustomerDto> getAllCustomer() throws Exception {
-//       ArrayList<CustomerDto> customerDtos = new ArrayList<>();
-//       
-//       ArrayList<CustomerEntity> customerEntities = customerDao.getAll();
-//       customerEntities.forEach(entity-> {
-//           customerDtos.add(new CustomerDto(entity.getId(),
-//                    entity.getTitle(), entity.getName(), entity.getDob(),
-//                    entity.getSalary(), entity.getAddress(), entity.getCity(),
-//                    entity.getProvice(), entity.getPostalCode()));
-//       });
-//       
-//       return customerDtos;
-//    }
+    @Override
+    public ArrayList<ProgramDto> getAllCustomer() throws Exception {
+       ArrayList<ProgramDto> programDtos = new ArrayList<>();
+       
+       ArrayList<ProgramEntity> customerEntities = programDao.getAll();
+       customerEntities.forEach(entity-> {
+           programDtos.add(new ProgramDto(entity.getId(),
+                    entity.getTitle(), entity.getName(), entity.getDob(),
+                    entity.getSalary(), entity.getAddress(), entity.getCity(),
+                    entity.getProvice(), entity.getPostalCode()));
+       });
+       
+       return customerDtos;
+    }
 }
 
 
