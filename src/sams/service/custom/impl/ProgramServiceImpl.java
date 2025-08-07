@@ -33,16 +33,16 @@ public class ProgramServiceImpl implements ProgramService{
         
     }
 
-    @Override
-    public String updateCustomer(ProgramDetailsDto programDetailsDto) throws Exception {
-        ProgramEntity entity = new ProgramEntity(
-                programDetailsDto.getProgramName(),
-                programDetailsDto.getProgramCode(),
-                programDetailsDto.getDuration(),
-                programDetailsDto.getDescription());
-        
-        return programDao.update(entity)? "Success" : "Fail";
-    }
+//    @Override
+//    public String updateCustomer(ProgramDetailsDto programDetailsDto) throws Exception {
+//        ProgramEntity entity = new ProgramEntity(
+//                programDetailsDto.getProgramName(),
+//                programDetailsDto.getProgramCode(),
+//                programDetailsDto.getDuration(),
+//                programDetailsDto.getDescription());
+//        
+//        return programDao.update(entity)? "Success" : "Fail";
+//    }
 
 //    @Override
 //    public String deleteCustomer(String code) throws Exception {
