@@ -67,10 +67,8 @@ public class ProgramServiceImpl implements ProgramService{
        
        ArrayList<ProgramEntity> customerEntities = programDao.getAll();
        customerEntities.forEach(entity-> {
-           programDtos.add(new ProgramDto(entity.getId(),
-                    entity.getTitle(), entity.getName(), entity.getDob(),
-                    entity.getSalary(), entity.getAddress(), entity.getCity(),
-                    entity.getProvice(), entity.getPostalCode()));
+           programDtos.add(new ProgramDto(entity.getProgramName(),
+                    entity.getProgramCode(), entity.getDuration(), entity.getDescription()));
        });
        
        return customerDtos;
