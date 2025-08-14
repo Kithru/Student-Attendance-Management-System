@@ -15,7 +15,9 @@ import sams.service.SuperService;
  */
 public interface ProgramService extends SuperService{
     public String saveProgram(ProgramDetailsDto programDetailsDto) throws Exception;
-    public String updateItem(ProgramDetailsDto programDetailsDto) throws Exception;
+//    public String updateItem(ProgramDetailsDto programDetailsDto) throws Exception;
+
+    <ProgramDto> ArrayList<ProgramDto> getAllProgram() throws Exception;
 //    public String deleteItem(String id) throws Exception;
 //    public ItemDto searchItem(String id) throws Exception;
 //    public ArrayList<ItemDto> getALlItem() throws Exception;

@@ -20,9 +20,9 @@ public class ProgramController {
         return programService.saveProgram(programDetailsDto);
     }
     
-    public String updateItem(ProgramDetailsDto programDetailsDto) throws Exception{
-        return programService.updateItem(programDetailsDto);
-    }
+//    public String updateItem(ProgramDetailsDto programDetailsDto) throws Exception{
+//        return programService.updateItem(programDetailsDto);
+//    }
 //    
 //    public String deleteItem(String code) throws Exception{
 //        return programService.deleteItem(code);
@@ -32,7 +32,7 @@ public class ProgramController {
 //        return programService.searchItem(code);
 //    }
 //    
-//    public ArrayList<ProgramDetailsDto> getAllItem() throws Exception{
-//        return programService.getALlItem();
-//    }
+    public ArrayList<ProgramDetailsDto> getAllProgram() throws Exception{
+        return programService.getAllProgram();
+    }
 }
