@@ -9,7 +9,7 @@ import sams.dao.custom.ProgramDao;
 import sams.dto.ProgramDetailsDto;
 import sams.entity.ProgramEntity;
 import sams.service.custom.ProgramService;
-import sams.service.SuperService;
+
 import java.util.ArrayList;
 
 
@@ -30,7 +30,6 @@ public class ProgramServiceImpl implements ProgramService{
                 programDetailsDto.getDescription());
         
         return programDao.save(entity)? "Success" : "Fail";
-        
     }
 
 //    @Override
@@ -62,16 +61,16 @@ public class ProgramServiceImpl implements ProgramService{
 //    }
 
     @Override
-    public ArrayList<ProgramDto> getAllCustomer() throws Exception {
-       ArrayList<ProgramDto> programDtos = new ArrayList<>();
+    public ArrayList<ProgramDetailsDto> getAllProgram() throws Exception {
+       ArrayList<ProgramDetailsDto> programDtos = new ArrayList<>();
        
-       ArrayList<ProgramEntity> customerEntities = programDao.getAll();
+       ArrayList<ProgramEntity> customerEntities = programDao.getAllProgram();
        customerEntities.forEach(entity-> {
-           programDtos.add(new ProgramDto(entity.getProgramName(),
+           programDtos.add(new ProgramDetailsDto(entity.getProgramName(),
                     entity.getProgramCode(), entity.getDuration(), entity.getDescription()));
        });
        
-       return customerDtos;
+       return programDtos;
     }
 }
 
