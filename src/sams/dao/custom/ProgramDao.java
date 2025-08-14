@@ -7,11 +7,14 @@ package sams.dao.custom;
 import sams.dao.CrudDao;
 import sams.entity.ProgramEntity;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author kithruV
  */
 
 public interface ProgramDao extends CrudDao<ProgramEntity, String>{
-    
+
+    ArrayList<ProgramEntity> getAllProgram() throws Exception;
 }
