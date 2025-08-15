@@ -64,6 +64,7 @@ public class Searchprogram extends JFrame {
             }
         ));
         jScrollPane1.setViewportView(programTable);
+        TableColumnModel ProgramName;
         programTable.setColumnModel(ProgramName);
 
         GroupLayout layout = new GroupLayout(getContentPane());
