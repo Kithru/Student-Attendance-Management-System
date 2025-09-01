@@ -49,7 +49,7 @@ public class ProgramServiceImpl implements ProgramService{
 //    }
 
     @Override
-    public CustomerDto searchCustomer(String code) throws Exception {
+    public ProgramDetailsDto searchCustomer(String code) throws Exception {
         CustomerEntity entity = customerDao.search(code);
         if(entity != null) {
             return new CustomerDto(entity.getId(),
