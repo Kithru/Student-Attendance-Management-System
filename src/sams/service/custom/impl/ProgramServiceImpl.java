@@ -50,7 +50,7 @@ public class ProgramServiceImpl implements ProgramService{
 
     @Override
     public ProgramDetailsDto searchCustomer(String code) throws Exception {
-        CustomerEntity entity = customerDao.search(code);
+        ProgramEntity entity = ProgramDao.search(code);
         if(entity != null) {
             return new CustomerDto(entity.getId(),
                     entity.getTitle(), entity.getName(), entity.getDob(),
