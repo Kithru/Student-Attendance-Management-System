@@ -17,8 +17,10 @@ public interface ProgramService extends SuperService{
     public String saveProgram(ProgramDetailsDto programDetailsDto) throws Exception;
 //    public String updateItem(ProgramDetailsDto programDetailsDto) throws Exception;
 
-    <ProgramDto> ArrayList<ProgramDto> getAllProgram() throws Exception;
+    <ProgramDetailsDto> ArrayList<sams.dto.ProgramDetailsDto> getAllProgram() throws Exception;
+
+
 //    public String deleteItem(String id) throws Exception;
-//    public ItemDto searchItem(String id) throws Exception;
+    public ProgramDetailsDto searchProgram(String id) throws Exception;
 //    public ArrayList<ItemDto> getALlItem() throws Exception;
 }
