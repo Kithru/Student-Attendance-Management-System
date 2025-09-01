@@ -9,6 +9,7 @@ package sams.entity;
  * @author kithruV
  */
 public class ProgramEntity {
+    private String programId;
     private String programName;
     private String programCode;
     private String duration;
@@ -17,7 +18,8 @@ public class ProgramEntity {
     public ProgramEntity() {
     }
 
-    public ProgramEntity(String programName, String programCode, String duration, String description) {
+    public ProgramEntity(String programId, String programCode, String duration, String description) {
+        this.programId = programId;
         this.programName = programName;
         this.programCode = programCode;
         this.duration = duration;
@@ -66,5 +68,8 @@ public class ProgramEntity {
                    ", description='" + description + '\'' +
                    '}';
         }
-    
+
+    public Object getProgramId() {
+        return programId;
+    }
 }
