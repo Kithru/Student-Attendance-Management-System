@@ -28,9 +28,9 @@ public class ProgramController {
 //        return programService.deleteItem(code);
 //    }
 //    
-//    public ProgramDetailsDto searchItem(String code) throws Exception{
-//        return programService.searchItem(code);
-//    }
+    public ProgramDetailsDto searchProgram(String code) throws Exception{
+        return programService.searchProgram(code);
+    }
 //    
     public ArrayList<ProgramDetailsDto> getAllProgram() throws Exception{
         return programService.getAllProgram();

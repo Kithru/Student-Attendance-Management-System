@@ -48,17 +48,17 @@ public class ProgramServiceImpl implements ProgramService{
 //        return customerDao.delete(code) ? "Success": "Fail"; 
 //    }
 
-//    @Override
-//    public CustomerDto searchCustomer(String code) throws Exception {
-//        CustomerEntity entity = customerDao.search(code);
-//        if(entity != null) {
-//            return new CustomerDto(entity.getId(),
-//                    entity.getTitle(), entity.getName(), entity.getDob(),
-//                    entity.getSalary(), entity.getAddress(), entity.getCity(),
-//                    entity.getProvice(), entity.getPostalCode());
-//        } 
-//        return null;
-//    }
+    @Override
+    public CustomerDto searchCustomer(String code) throws Exception {
+        CustomerEntity entity = customerDao.search(code);
+        if(entity != null) {
+            return new CustomerDto(entity.getId(),
+                    entity.getTitle(), entity.getName(), entity.getDob(),
+                    entity.getSalary(), entity.getAddress(), entity.getCity(),
+                    entity.getProvice(), entity.getPostalCode());
+        }
+        return null;
+    }
 
     @Override
     public ArrayList<ProgramDetailsDto> getAllProgram() throws Exception {
