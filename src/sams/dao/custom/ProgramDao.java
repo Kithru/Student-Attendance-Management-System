@@ -16,5 +16,9 @@ import java.util.ArrayList;
 
 public interface ProgramDao extends CrudDao<ProgramEntity, String>{
 
+    static ProgramEntity searchProgram(String Id) throws Exception {
+        return null;
+    }
+
     ArrayList<ProgramEntity> getAllProgram() throws Exception;
 }
