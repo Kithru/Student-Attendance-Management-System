@@ -189,6 +189,7 @@ public class Signup extends javax.swing.JFrame {
 
     private void saveProgram() {
         ProgramDetailsDto programDetailsDto = new ProgramDetailsDto(
+                null,
                 programName.getText(),
                 programCode.getText(),
                 duration.getText(),

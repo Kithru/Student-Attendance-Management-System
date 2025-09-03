@@ -49,28 +49,27 @@ public class ProgramServiceImpl implements ProgramService{
 //    }
 
     @Override
-    public ProgramDetailsDto searchCustomer(String code) throws Exception {
-        ProgramEntity entity = ProgramDao.search(code);
+    public ProgramDetailsDto searchProgram(String Id) throws Exception {
+        ProgramEntity entity = ProgramDao.searchProgram(Id);
         if(entity != null) {
-            return new CustomerDto(entity.getId(),
-                    entity.getTitle(), entity.getName(), entity.getDob(),
-                    entity.getSalary(), entity.getAddress(), entity.getCity(),
-                    entity.getProvice(), entity.getPostalCode());
+            return new ProgramDetailsDto((String) entity.getProgramId(),
+                    entity.getProgramName(), entity.getProgramCode(),
+                    entity.getDuration(),entity.getDescription());
         }
         return null;
     }
 
     @Override
     public ArrayList<ProgramDetailsDto> getAllProgram() throws Exception {
-       ArrayList<ProgramDetailsDto> programDtos = new ArrayList<>();
+       ArrayList<ProgramDetailsDto> programDetailsDtosDtos = new ArrayList<>();
        
-       ArrayList<ProgramEntity> customerEntities = programDao.getAllProgram();
-       customerEntities.forEach(entity-> {
-           programDtos.add(new ProgramDetailsDto(entity.getProgramName(),
+       ArrayList<ProgramEntity> programEntities = programDao.getAllProgram();
+       programEntities.forEach(entity-> {
+           programDetailsDtosDtos.add(new ProgramDetailsDto(entity.getProgramName(),entity.getProgramName(),
                     entity.getProgramCode(), entity.getDuration(), entity.getDescription()));
        });
        
-       return programDtos;
+       return programDetailsDtosDtos;
     }
 }
 
