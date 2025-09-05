@@ -7,6 +7,8 @@ package sams.controller;
 import sams.dto.ProgramDetailsDto;
 import sams.service.ServiceFactory;
 import sams.service.custom.ProgramService;
+
+import javax.swing.*;
 import java.util.ArrayList;
 /**
  *
@@ -35,4 +37,5 @@ public class ProgramController {
     public ArrayList<ProgramDetailsDto> getAllProgram() throws Exception{
         return programService.getAllProgram();
     }
+
 }
