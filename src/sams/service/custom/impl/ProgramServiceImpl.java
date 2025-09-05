@@ -61,15 +61,15 @@ public class ProgramServiceImpl implements ProgramService{
 
     @Override
     public ArrayList<ProgramDetailsDto> getAllProgram() throws Exception {
-       ArrayList<ProgramDetailsDto> programDetailsDtosDtos = new ArrayList<>();
+       ArrayList<ProgramDetailsDto> programDetailsDtos = new ArrayList<>();
        
        ArrayList<ProgramEntity> programEntities = programDao.getAllProgram();
        programEntities.forEach(entity-> {
-           programDetailsDtosDtos.add(new ProgramDetailsDto(entity.getProgramName(),entity.getProgramName(),
+           programDetailsDtos.add(new ProgramDetailsDto(entity.getProgramName(),entity.getProgramName(),
                     entity.getProgramCode(), entity.getDuration(), entity.getDescription()));
        });
        
-       return programDetailsDtosDtos;
+       return programDetailsDtos;
     }
 }
 
