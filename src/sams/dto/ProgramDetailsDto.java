@@ -25,7 +25,6 @@ public class ProgramDetailsDto {
         this.description = description;
     }
 
-
     public String getProgramId() {
         return programId;
     }

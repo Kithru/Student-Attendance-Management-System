@@ -138,8 +138,12 @@ public class Searchprogram extends JFrame {
             public void run() {
                 new Searchprogram().setVisible(true);
             }
+
+
         });
     }
+
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private JLabel jLabel3;
