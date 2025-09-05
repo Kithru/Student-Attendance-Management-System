@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
 public class Signup extends javax.swing.JFrame {
 
     private ProgramController programController = new ProgramController();
+
     /**
      * Creates new form Signup
      */

@@ -10,6 +10,9 @@ import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import sams.controller.ProgramController;
+import sams.dto.ProgramDetailsDto;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,11 +20,37 @@ import java.util.logging.Logger;
  */
 public class Searchprogram extends JFrame {
 
+    private ProgramController programController = new ProgramController();
     /**
      * Creates new form Searchprogram
      */
     public Searchprogram() {
         initComponents();
+        loadTable();
+
+        String searchText = programName.getText().trim();
+
+        try {
+            ArrayList<ProgramDetailsDto> programList = programController.getAllProgram();
+
+            DefaultTableModel model = (DefaultTableModel) programTable.getModel();
+            model.setRowCount(0);
+
+            for (ProgramDetailsDto dto : programList) {
+                if (dto.getProgramName().toLowerCase().contains(searchText.toLowerCase()) ||
+                        dto.getProgramCode().toLowerCase().contains(searchText.toLowerCase())) {
+                    model.addRow(new Object[]{
+                            dto.getProgramName(),
+                            dto.getProgramCode(),
+                            dto.getDuration(),
+                            dto.getDescription(),
+                            "Edit/Delete"
+                    });
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Search failed: " + e.getMessage());
+        }
     }
 
     /**
@@ -141,6 +170,27 @@ public class Searchprogram extends JFrame {
 
 
         });
+    }
+
+    private void loadTable() {
+        try {
+            ArrayList<ProgramDetailsDto> programList = programController.getAllProgram();
+
+            DefaultTableModel model = (DefaultTableModel) programTable.getModel();
+            model.setRowCount(0); // clear old rows
+
+            for (ProgramDetailsDto dto : programList) {
+                model.addRow(new Object[]{
+                        dto.getProgramName(),
+                        dto.getProgramCode(),
+                        dto.getDuration(),
+                        dto.getDescription(),
+                        "Edit/Delete"  // later replaced with buttons
+                });
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error loading programs: " + e.getMessage());
+        }
     }
 
 

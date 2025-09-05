@@ -14,7 +14,7 @@ public interface CrudDao<T, ID> extends SuperDao{
 //    public boolean update(T t) throws Exception;
 //    public boolean delete(ID id) throws Exception;
 //    public T search(ID id) throws Exception;
-//    public ArrayList<T> getAll() throws Exception;
+    public ArrayList<T> getAllProgram() throws Exception;
 }
 
 
