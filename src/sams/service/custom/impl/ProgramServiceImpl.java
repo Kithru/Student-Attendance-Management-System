@@ -68,7 +68,6 @@ public class ProgramServiceImpl implements ProgramService{
            programDetailsDtos.add(new ProgramDetailsDto(entity.getProgramName(),entity.getProgramName(),
                     entity.getProgramCode(), entity.getDuration(), entity.getDescription()));
        });
-       
        return programDetailsDtos;
     }
 }
