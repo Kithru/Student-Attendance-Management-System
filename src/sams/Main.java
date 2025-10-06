@@ -6,10 +6,8 @@ package sams;
 
 import sams.db.DBConnection;
 import java.sql.SQLException;
-import sams.view.Login;
-import sams.view.Searchprogram;
-import sams.view.Signup;
-import sams.view.Batch;
+
+import sams.view.*;
 
 /**
  *
@@ -22,7 +20,8 @@ public class Main {
      */
     public static void main(String[] args){
         // TODO code application logic here
-        new Searchprogram().setVisible(true);
+//        new Searchprogram().setVisible(true);
+        new ManagePrograms().setVisible(true);
 //        new Signup().setVisible(true);
 //        new Batch().setVisible(true);
         

@@ -130,6 +130,8 @@ public class Signup extends javax.swing.JFrame {
                 .addContainerGap(70, Short.MAX_VALUE))
         );
 
+        btnProCreate.getAccessibleContext().setAccessibleName("Manage");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
