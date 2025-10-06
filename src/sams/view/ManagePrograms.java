@@ -26,27 +26,29 @@ public class ManagePrograms extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        programIdForSearch = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Manage Program Details");
+        programIdForSearch.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        programIdForSearch.setForeground(new java.awt.Color(51, 51, 255));
+        programIdForSearch.setText("Manage Program Details");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(234, 234, 234)
-                .addComponent(jLabel1)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addGap(178, 178, 178)
+                .addComponent(programIdForSearch)
+                .addContainerGap(191, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(jLabel1)
-                .addContainerGap(347, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(programIdForSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(353, Short.MAX_VALUE))
         );
 
         pack();
@@ -88,6 +90,6 @@ public class ManagePrograms extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel programIdForSearch;
     // End of variables declaration//GEN-END:variables
 }
