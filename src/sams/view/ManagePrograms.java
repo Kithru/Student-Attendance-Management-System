@@ -27,15 +27,15 @@ public class ManagePrograms extends javax.swing.JFrame {
     private void initComponents() {
 
         programIdForSearch = new javax.swing.JLabel();
-        programCode = new java.awt.TextField();
-        description = new java.awt.TextArea();
-        btnProCreate = new java.awt.Button();
+        manageProgramCode = new java.awt.TextField();
+        manageDescription = new java.awt.TextArea();
+        btnProManage = new java.awt.Button();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        duration = new java.awt.TextField();
-        programName = new java.awt.TextField();
+        manageDuration = new java.awt.TextField();
+        manageProgramName = new java.awt.TextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,13 +43,13 @@ public class ManagePrograms extends javax.swing.JFrame {
         programIdForSearch.setForeground(new java.awt.Color(51, 51, 255));
         programIdForSearch.setText("Manage Program Details");
 
-        btnProCreate.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnProCreate.setForeground(new java.awt.Color(51, 51, 255));
-        btnProCreate.setLabel("Manage");
-        btnProCreate.setName(""); // NOI18N
-        btnProCreate.addActionListener(new java.awt.event.ActionListener() {
+        btnProManage.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnProManage.setForeground(new java.awt.Color(51, 51, 255));
+        btnProManage.setLabel("Manage");
+        btnProManage.setName(""); // NOI18N
+        btnProManage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProCreateActionPerformed(evt);
+                btnProManageActionPerformed(evt);
             }
         });
 
@@ -77,7 +77,7 @@ public class ManagePrograms extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(223, 223, 223)
-                        .addComponent(btnProCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnProManage, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(114, 114, 114)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,10 +89,10 @@ public class ManagePrograms extends javax.swing.JFrame {
                                     .addComponent(jLabel3))
                                 .addGap(65, 65, 65)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(duration, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(description, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(programCode, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(programName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(manageDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(manageDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(manageProgramCode, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(manageProgramName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -103,7 +103,7 @@ public class ManagePrograms extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addComponent(programName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(manageProgramName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -111,25 +111,25 @@ public class ManagePrograms extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(programCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(manageProgramCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19)
-                        .addComponent(duration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(manageDuration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addComponent(description, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(manageDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
-                .addComponent(btnProCreate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnProManage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnProCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProCreateActionPerformed
+    private void btnProManageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProManageActionPerformed
         // TODO add your handling code here:
 //        manageProgram();
-    }//GEN-LAST:event_btnProCreateActionPerformed
+    }//GEN-LAST:event_btnProManageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,15 +167,15 @@ public class ManagePrograms extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button btnProCreate;
-    private java.awt.TextArea description;
-    private java.awt.TextField duration;
+    private java.awt.Button btnProManage;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private java.awt.TextField programCode;
+    private java.awt.TextArea manageDescription;
+    private java.awt.TextField manageDuration;
+    private java.awt.TextField manageProgramCode;
+    private java.awt.TextField manageProgramName;
     private javax.swing.JLabel programIdForSearch;
-    private java.awt.TextField programName;
     // End of variables declaration//GEN-END:variables
 }
