@@ -45,7 +45,8 @@ public class ManagePrograms extends javax.swing.JFrame {
 
         btnProCreate.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnProCreate.setForeground(new java.awt.Color(51, 51, 255));
-        btnProCreate.setLabel("Create");
+        btnProCreate.setLabel("Manage");
+        btnProCreate.setName(""); // NOI18N
         btnProCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProCreateActionPerformed(evt);
