@@ -36,6 +36,7 @@ public class ManagePrograms extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         manageDuration = new java.awt.TextField();
         manageProgramName = new java.awt.TextField();
+        btnClear = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,7 +46,7 @@ public class ManagePrograms extends javax.swing.JFrame {
 
         btnProManage.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnProManage.setForeground(new java.awt.Color(51, 51, 255));
-        btnProManage.setLabel("Manage");
+        btnProManage.setLabel("Save");
         btnProManage.setName(""); // NOI18N
         btnProManage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +66,16 @@ public class ManagePrograms extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Description");
 
+        btnClear.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(51, 51, 255));
+        btnClear.setLabel("Clear");
+        btnClear.setName(""); // NOI18N
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClearActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -74,26 +85,27 @@ public class ManagePrograms extends javax.swing.JFrame {
                 .addComponent(programIdForSearch)
                 .addGap(188, 188, 188))
             .addGroup(layout.createSequentialGroup()
+                .addGap(114, 114, 114)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(223, 223, 223)
-                        .addComponent(btnProManage, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel3))
-                                .addGap(65, 65, 65)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(manageDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(manageDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(manageProgramCode, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(manageProgramName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel5)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(46, 46, 46)
+                            .addComponent(btnProManage, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel7)
+                                .addComponent(jLabel3))
+                            .addGap(65, 65, 65)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(manageDuration, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(manageDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(manageProgramCode, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(manageProgramName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(134, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,7 +131,9 @@ public class ManagePrograms extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(manageDescription, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
-                .addComponent(btnProManage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnProManage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
@@ -130,6 +144,10 @@ public class ManagePrograms extends javax.swing.JFrame {
         // TODO add your handling code here:
 //        manageProgram();
     }//GEN-LAST:event_btnProManageActionPerformed
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnClearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,6 +185,7 @@ public class ManagePrograms extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button btnClear;
     private java.awt.Button btnProManage;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
