@@ -28,9 +28,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="btnProManage" min="-2" pref="119" max="-2" attributes="0"/>
+                      <Component id="btnProManageSave" min="-2" pref="119" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="btnClear" min="-2" pref="119" max="-2" attributes="0"/>
+                      <Component id="btnProManageClear" min="-2" pref="119" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Component id="btnBack" min="-2" pref="119" max="-2" attributes="0"/>
                   </Group>
@@ -88,8 +88,8 @@
               </Group>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnProManage" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnClear" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnProManageSave" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnProManageClear" min="-2" max="-2" attributes="0"/>
                   <Component id="btnBack" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="56" max="32767" attributes="0"/>
@@ -113,7 +113,7 @@
     </Component>
     <Component class="java.awt.TextArea" name="manageDescription">
     </Component>
-    <Component class="java.awt.Button" name="btnProManage">
+    <Component class="java.awt.Button" name="btnProManageSave">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="14" style="1"/>
@@ -125,7 +125,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProManageActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProManageSaveActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -164,7 +164,7 @@
     </Component>
     <Component class="java.awt.TextField" name="manageProgramName">
     </Component>
-    <Component class="java.awt.Button" name="btnClear">
+    <Component class="java.awt.Button" name="btnProManageClear">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="14" style="1"/>
@@ -176,7 +176,7 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClearActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProManageClearActionPerformed"/>
       </Events>
     </Component>
     <Component class="java.awt.Button" name="btnBack">
