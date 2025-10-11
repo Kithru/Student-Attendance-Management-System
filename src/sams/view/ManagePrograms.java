@@ -36,7 +36,6 @@ public class ManagePrograms extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         manageDuration = new java.awt.TextField();
         manageProgramName = new java.awt.TextField();
-        btnProManageClear = new java.awt.Button();
         btnProManageBack = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,16 +65,6 @@ public class ManagePrograms extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Description");
-
-        btnProManageClear.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnProManageClear.setForeground(new java.awt.Color(51, 51, 255));
-        btnProManageClear.setLabel("Clear");
-        btnProManageClear.setName(""); // NOI18N
-        btnProManageClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProManageClearActionPerformed(evt);
-            }
-        });
 
         btnProManageBack.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnProManageBack.setForeground(new java.awt.Color(51, 51, 255));
@@ -115,9 +104,7 @@ public class ManagePrograms extends javax.swing.JFrame {
                         .addGap(188, 188, 188))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnProManageSave, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(btnProManageClear, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addGap(171, 171, 171)
                         .addComponent(btnProManageBack, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(72, 72, 72))))
         );
@@ -147,7 +134,6 @@ public class ManagePrograms extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnProManageSave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnProManageClear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnProManageBack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
@@ -159,10 +145,6 @@ public class ManagePrograms extends javax.swing.JFrame {
         // TODO add your handling code here:
 //        manageProgram();
     }//GEN-LAST:event_btnProManageSaveActionPerformed
-
-    private void btnProManageClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProManageClearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnProManageClearActionPerformed
 
     private void btnProManageBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProManageBackActionPerformed
         // TODO add your handling code here:
@@ -205,7 +187,6 @@ public class ManagePrograms extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button btnProManageBack;
-    private java.awt.Button btnProManageClear;
     private java.awt.Button btnProManageSave;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
