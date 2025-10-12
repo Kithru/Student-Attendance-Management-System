@@ -147,8 +147,7 @@ public class ManagePrograms extends javax.swing.JFrame {
     }//GEN-LAST:event_btnProManageSaveActionPerformed
 
     private void btnProManageBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProManageBackActionPerformed
-        Search searchFrame = new SearchProgram();
-        searchFrame.setVisible(true);
+        new Searchprogram().setVisible(true);
     
         this.dispose();
     }//GEN-LAST:event_btnProManageBackActionPerformed
