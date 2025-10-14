@@ -37,10 +37,11 @@ public class Searchprogram extends JFrame {
             model.setRowCount(0);
 
             for (ProgramDetailsDto dto : programList) {
+                // safely handle nulls
                 String name = dto.getProgramName() != null ? dto.getProgramName().toLowerCase() : "";
                 String code = dto.getProgramCode() != null ? dto.getProgramCode().toLowerCase() : "";
-                if (dto.getProgramName().toLowerCase().contains(searchText.toLowerCase()) ||
-                        dto.getProgramCode().toLowerCase().contains(searchText.toLowerCase())) {
+
+                if (name.contains(searchText.toLowerCase()) || code.contains(searchText.toLowerCase())) {
                     model.addRow(new Object[]{
                             dto.getProgramName(),
                             dto.getProgramCode(),
@@ -64,26 +65,31 @@ public class Searchprogram extends JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        programIdForSearch = new JLabel();
-        jLabel3 = new JLabel();
-        programName = new TextField();
-        jToggleButton1 = new JToggleButton();
-        jScrollPane1 = new JScrollPane();
-        programTable = new JTable();
+        programIdForSearch = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        programName = new java.awt.TextField();
+        searchProgramBtn = new javax.swing.JToggleButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        programTable = new javax.swing.JTable();
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        programIdForSearch.setFont(new Font("Segoe UI", 1, 18)); // NOI18N
-        programIdForSearch.setForeground(new Color(51, 51, 255));
+        programIdForSearch.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        programIdForSearch.setForeground(new java.awt.Color(51, 51, 255));
         programIdForSearch.setText("Search Program Details");
 
-        jLabel3.setFont(new Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Program ID");
 
-        jToggleButton1.setFont(new Font("Segoe UI", 1, 14)); // NOI18N
-        jToggleButton1.setText("Search");
+        searchProgramBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        searchProgramBtn.setText("Search");
+        searchProgramBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchProgramBtnActionPerformed(evt);
+            }
+        });
 
-        programTable.setModel(new DefaultTableModel(
+        programTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -91,51 +97,55 @@ public class Searchprogram extends JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "ProgramName", "ProgramCode", "Duration", "Description", "Manage"
+                "Program Name", "Program Code", "Duration", "Description", "Manage"
             }
         ));
         jScrollPane1.setViewportView(programTable);
-//        programTable.setColumnModel(ProgramName);
+        programTable.setColumnModel(Program Name);
 
-        GroupLayout layout = new GroupLayout(getContentPane());
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addComponent(jLabel3)
                 .addGap(65, 65, 65)
-                .addComponent(programName, GroupLayout.PREFERRED_SIZE, 162, GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton1)
+                .addComponent(programName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(searchProgramBtn)
                 .addGap(72, 72, 72))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 582, GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(198, 198, 198)
-                        .addComponent(programIdForSearch, GroupLayout.PREFERRED_SIZE, 209, GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(programIdForSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(programIdForSearch)
                 .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                    .addComponent(jToggleButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(searchProgramBtn)
                     .addComponent(jLabel3)
-                    .addComponent(programName, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                    .addComponent(programName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
-                .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void searchProgramBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchProgramBtnActionPerformed
+        searchProgramBtn.addActionListener(e -> searchPrograms());
+    }//GEN-LAST:event_searchProgramBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,15 +204,42 @@ public class Searchprogram extends JFrame {
             JOptionPane.showMessageDialog(this, "Error loading programs: " + e.getMessage());
         }
     }
+    private void searchPrograms() {
+        String searchText = programName.getText().trim().toLowerCase();
+
+        try {
+            ArrayList<ProgramDetailsDto> programList = programController.getAllProgram();
+            DefaultTableModel model = (DefaultTableModel) programTable.getModel();
+            model.setRowCount(0);
+
+            for (ProgramDetailsDto dto : programList) {
+                String name = dto.getProgramName() != null ? dto.getProgramName().toLowerCase() : "";
+                String code = dto.getProgramCode() != null ? dto.getProgramCode().toLowerCase() : "";
+
+                if (name.contains(searchText) || code.contains(searchText)) {
+                    model.addRow(new Object[]{
+                            dto.getProgramName(),
+                            dto.getProgramCode(),
+                            dto.getDuration(),
+                            dto.getDescription(),
+                            "Edit/Delete"
+                    });
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Search failed: " + e.getMessage());
+        }
+    }
+    
 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private JLabel jLabel3;
-    private JScrollPane jScrollPane1;
-    private JToggleButton jToggleButton1;
-    private JLabel programIdForSearch;
-    private TextField programName;
-    private JTable programTable;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel programIdForSearch;
+    private java.awt.TextField programName;
+    private javax.swing.JTable programTable;
+    private javax.swing.JToggleButton searchProgramBtn;
     // End of variables declaration//GEN-END:variables
 }
