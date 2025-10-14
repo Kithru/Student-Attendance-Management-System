@@ -37,6 +37,8 @@ public class Searchprogram extends JFrame {
             model.setRowCount(0);
 
             for (ProgramDetailsDto dto : programList) {
+                String name = dto.getProgramName() != null ? dto.getProgramName().toLowerCase() : "";
+                String code = dto.getProgramCode() != null ? dto.getProgramCode().toLowerCase() : "";
                 if (dto.getProgramName().toLowerCase().contains(searchText.toLowerCase()) ||
                         dto.getProgramCode().toLowerCase().contains(searchText.toLowerCase())) {
                     model.addRow(new Object[]{
