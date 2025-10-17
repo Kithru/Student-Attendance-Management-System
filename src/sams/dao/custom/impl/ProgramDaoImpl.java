@@ -17,10 +17,13 @@ import java.sql.ResultSet;
  */
 public class ProgramDaoImpl implements ProgramDao{  
     @Override
-    public boolean save(ProgramEntity t) throws Exception {
+    public boolean save(ProgramEntity entity) throws Exception {
         return CrudUtil.executeUpdate(
-            "INSERT INTO Program (programName, programCode, duration, description) VALUES (?, ?, ?, ?)",
-            t.getProgramName(), t.getProgramCode(), t.getDuration(), t.getDescription()
+            "INSERT INTO Program (ProgramName, ProgramCode, Duration, Description) VALUES (?, ?, ?, ?)",
+            entity.getProgramName(),
+            entity.getProgramCode(),
+            entity.getDuration(),
+            entity.getDescription()
         );
     }
 
@@ -59,6 +62,7 @@ public class ProgramDaoImpl implements ProgramDao{
 
         while (rst.next()) {
             programEntities.add(new ProgramEntity(
+                    rst.getString("ProgramID"),
                     rst.getString("ProgramName"),
                     rst.getString("ProgramCode"),
                     rst.getString("Duration"),

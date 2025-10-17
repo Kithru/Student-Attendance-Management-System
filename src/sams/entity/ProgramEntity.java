@@ -18,7 +18,15 @@ public class ProgramEntity {
     public ProgramEntity() {
     }
 
-    public ProgramEntity(String programId, String programCode, String duration, String description) {
+    public ProgramEntity(String programName, String programCode, String duration, String description) {
+        this.programName = programName;
+        this.programCode = programCode;
+        this.duration = duration;
+        this.description = description;
+    }
+
+    // Constructor for existing records
+    public ProgramEntity(String programId, String programName, String programCode, String duration, String description) {
         this.programId = programId;
         this.programName = programName;
         this.programCode = programCode;
