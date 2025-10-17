@@ -17,7 +17,7 @@ public class ProgramDetailsDto {
 
 
 
-    public ProgramDetailsDto(String programId, String programName, String programCode, String duration, String description) {
+    public ProgramDetailsDto(String programId, String programName, String programCode, String duration,String description) {
         this.programId = programId;
         this.programName = programName;
         this.programCode = programCode;

@@ -4,8 +4,6 @@
  */
 package sams.view;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import sams.dto.ProgramDetailsDto;
 import sams.controller.ProgramController;
 import javax.swing.JOptionPane;
@@ -192,11 +190,12 @@ public class Signup extends javax.swing.JFrame {
 
     private void saveProgram() {
         ProgramDetailsDto programDetailsDto = new ProgramDetailsDto(
-                null,
-                programName.getText(),
-                programCode.getText(),
-                duration.getText(),
-                description.getText());
+            null, // ID auto-generated
+            programName.getText(),
+            programCode.getText(),
+            duration.getText(),
+            description.getText()
+        );
 
         System.out.println(programDetailsDto);
 
