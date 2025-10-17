@@ -95,6 +95,11 @@ public class Searchprogram extends JFrame {
             model.setRowCount(0);
 
             for (ProgramDetailsDto dto : programList) {
+                
+           
+    System.out.println("Program Name: " + dto.getProgramName());
+    System.out.println("Program Code: " + dto.getProgramCode());
+
                 model.addRow(new Object[]{
                         dto.getProgramName(),
                         dto.getProgramCode(),
