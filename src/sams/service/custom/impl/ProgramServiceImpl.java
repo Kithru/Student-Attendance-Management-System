@@ -23,11 +23,12 @@ public class ProgramServiceImpl implements ProgramService{
     private ProgramDao programDao = (ProgramDao) DaoFactory.getInstance().getDao(DaoFactory.DaoTypes.PROGRAM);
     @Override
     public String saveProgram(ProgramDetailsDto programDetailsDto) throws Exception {
-        ProgramEntity entity = new ProgramEntity( 
-                programDetailsDto.getProgramName(),
-                programDetailsDto.getProgramCode(),
-                programDetailsDto.getDuration(),
-                programDetailsDto.getDescription());
+        ProgramEntity entity = new ProgramEntity(
+            programDetailsDto.getProgramName(),
+            programDetailsDto.getProgramCode(),
+            programDetailsDto.getDuration(),
+            programDetailsDto.getDescription()
+        );
         
         return programDao.save(entity)? "Success" : "Fail";
     }
@@ -66,6 +67,7 @@ public class ProgramServiceImpl implements ProgramService{
         ArrayList<ProgramEntity> programEntities = programDao.getAllProgram();
         programEntities.forEach(entity -> {
             programDetailsDtos.add(new ProgramDetailsDto(
+                (String) entity.getProgramId(),
                 entity.getProgramName(),
                 entity.getProgramCode(),
                 entity.getDuration(),
